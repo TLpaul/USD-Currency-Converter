@@ -1,0 +1,49 @@
+// CConverter.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include "CConverter.h"
+using namespace std;
+
+
+
+int main()
+{
+    std::cout << "Welcome to Currency Converter !\n";
+
+    float home;
+    float ExcahngeR;
+
+    int opt = 0;
+    
+
+    cout << "please enter your amount of USD" << endl;
+    cin >> home;
+
+    cout << "opt 1 USD to European Dollar " << endl;
+    cout << "opt 2 USD to Canadian Dollar" << endl;
+    cout << "opt 3 USD to Mexican Peso " << endl;
+
+    cin >> opt;
+
+
+    switch (opt) {
+    case 1:
+        //usd to euro
+        cout << "You will have $";
+        cout << convert(home, .92);
+        break;
+    case 2:
+        //usd to CAD
+        cout << "You will have $";
+        cout <<  convert(home, 1.35);
+        break;
+    case 3:
+        //usd to mexican Peso
+        cout << "You will have $";
+        cout << convert(home, 17.11);
+    }
+
+}
+
+ 
